@@ -8,7 +8,7 @@ SELECT DISTINCT salario FROM funcionario; /*Questao 4 */
 
 SELECT * FROM projeto INNER JOIN departamento on Dnum=Dnumero WHERE Dnome='Pesquisa' ORDER BY projnome DESC; /*Questao 5 */
 
-SELECT departamento.Dnumero,departamento.cpf_gerente,localizacoes_dep.Dlocal FROM departamento,localizacoes_dep WHERE departamento.Dnumero = localizacoes_dep.Dnumero AND dlocal = 'santo andré'; /*Questao 6 */
+SELECT Dnome,cpf_gerente from departamento,localizacoes_dep WHERE departamento.dnumero=localizacoes_dep.Dnumero and locate('Santo André',localizacoes_dep.Dlocal) ;
 
 SELECT  e.Pnome funcionario_pnome,e.Unome funcionario_unome,
 	m.Pnome supervisor_pnome,m.Unome supervisor_unome
